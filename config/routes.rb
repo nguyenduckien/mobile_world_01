@@ -6,4 +6,11 @@ Rails.application.routes.draw do
   get "accessory", to: "static_pages#accessory"
   get "sale", to: "static_pages#sale"
   get "/signup", to: "users#new"
+  post "/signup", to: "users#create"
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
+  get "/manager", to: "users#manager"
+  resources :users
+  resources :products
 end

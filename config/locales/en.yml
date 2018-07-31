@@ -76,6 +76,8 @@ en:
       title: "Khuyến mãi"
     tablet:
       title: "Máy tính bảng"
+    view:
+      title: "Chi tiet"
 
   users:
     new:

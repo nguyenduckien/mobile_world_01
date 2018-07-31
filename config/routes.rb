@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "laptop", to: "static_pages#laptop"
   get "accessory", to: "static_pages#accessory"
   get "sale", to: "static_pages#sale"
+  get "view", to: "static_pages#view"
   get "/signup", to: "users#new"
   post "/signup", to: "users#create"
   get "/login", to: "sessions#new"
@@ -13,4 +14,8 @@ Rails.application.routes.draw do
   get "/manager", to: "users#manager"
   resources :users
   resources :products
+
+
+  resources :order_items
+  resource :carts, only: [:show]
 end

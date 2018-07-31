@@ -13,8 +13,10 @@
         <li><%= link_to t("static_pages.phone.title"), phone_path, title: t(".phone_title") %></li>
         <li><%= link_to t("static_pages.tablet.title"), tablet_path, title: t(".tablet_title") %></li>
         <li><%= link_to t("static_pages.laptop.title"), laptop_path, title: t(".laptop_title") %></li>
-        <li><%= link_to t("static_pages.accessory.title"), accessory_path, title: t(".accessory_title") %></li>
-        <li><%= link_to t("static_pages.sale.title"), sale_path, title: t(".sale_title") %></li>
+        <li><%= link_to t("static_pages.accessory.title"), accessory_path, title: t(".accessory_title")
+         %></li>
+         <li><%= link_to t("static_pages.laptop.title"), laptop_path, title: t(".laptop_title") %></li>
+        <li><%= link_to t("static_pages.sale.title"), view_path, title: t(".sale_title") %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <form class="navbar-form navbar-left" action="">
@@ -28,7 +30,8 @@
         <% if logged_in? %>
           <% if current_user.admin? %>
           <% else %>
-            <li><span class="glyphicon glyphicon-shopping-cart"></span> <span class="badge">0</span></li>
+            <li><button  class="glyphicon glyphicon-shopping-cart" type="button"  data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></button> <span class="badge">0</span>
+            </li>
           <% end %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
